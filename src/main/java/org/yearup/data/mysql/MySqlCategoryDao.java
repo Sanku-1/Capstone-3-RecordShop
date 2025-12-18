@@ -1,27 +1,45 @@
 package org.yearup.data.mysql;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.yearup.data.CategoryDao;
 import org.yearup.models.Category;
 
 import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 @Component
 public class MySqlCategoryDao extends MySqlDaoBase implements CategoryDao
 {
-    public MySqlCategoryDao(DataSource dataSource)
-    {
+
+    public MySqlCategoryDao(DataSource dataSource) {
         super(dataSource);
     }
 
     @Override
     public List<Category> getAllCategories()
     {
-        // get all categories
-        return null;
+        List<Category> categories = new ArrayList<>();
+        String getAllQuery = "SELECT * FROM categories";
+
+        try (Connection connection = dataSource.getConnection();
+             PreparedStatement selectStatement = connection.prepareStatement(getAllQuery);
+             ResultSet resultSet = selectStatement.executeQuery()) {
+            while (resultSet.next()) {
+                int categoryId = resultSet.getInt("category_id");
+                String name = resultSet.getString("name");
+                String description = resultSet.getString("description");
+                categories.add(new Category(categoryId, name, description));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // Log or handle the SQL exception.
+        }
+        return categories; // Return the list of transactions.
     }
 
     @Override
