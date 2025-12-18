@@ -1,9 +1,12 @@
 package org.yearup.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 import org.yearup.data.CategoryDao;
 import org.yearup.data.ProductDao;
+import org.yearup.data.mysql.MySqlCategoryDao;
 import org.yearup.models.Category;
 import org.yearup.models.Product;
 
@@ -35,9 +38,14 @@ public class CategoriesController {
     }
 
     // add the appropriate annotation for a get action
+    @GetMapping("/{id}")
     public Category getById(@PathVariable int id) {
         // get the category by id
-        return null;
+        Category category = categoryDao.getById(id);
+        if (category == null) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
+        return category;
     }
 
     // the url to return all products in category 1 would look like this
