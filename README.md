@@ -5,7 +5,7 @@ EasyShop - Record Shop E-Commerce API
 
 EasyShop Record Shop is an e-commerce application that allows users to browse and purchase vinyl records, CDs, and music accessories. This project serves as the backend API built with Spring Boot and MySQL. The API handles user authentication, product browsing by category, shopping cart management, user profiles, and order checkout.
 
-The application supports two user roles: customers and administrators. Administrators can manage product categories and inventory, while customers can browse products, manage their shopping carts, update their profiles, and complete purchases.
+The application supports two user roles, customers and administrators. Administrators can manage product categories and inventory, while customers can browse products, manage their shopping carts, update their profiles, and complete purchases.
 
 For this project, I assumed the role of a backend developer for an existing website. The work included fixing bugs in the existing code, implementing the CategoriesController, building out the shopping cart feature, creating user profile management, and implementing the checkout/orders functionality.
 
