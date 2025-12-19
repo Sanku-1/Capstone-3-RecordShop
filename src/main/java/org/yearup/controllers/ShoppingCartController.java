@@ -19,7 +19,7 @@ import java.security.Principal;
 @RequestMapping("/cart")
 @CrossOrigin
 // only logged in users should have access to these actions
-@PreAuthorize("hasRole('ROLE_USER')")
+@PreAuthorize("isAuthenticated()")
 public class ShoppingCartController
 {
     // a shopping cart requires
