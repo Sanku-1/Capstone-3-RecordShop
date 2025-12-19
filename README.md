@@ -1,5 +1,5 @@
 # Project Title
-EasyShop - Record Shop E-Commerce API
+EasyShop - Record Shop API
 
 ## Description of the Project
 
@@ -72,11 +72,10 @@ Follow these steps to get your application running within IntelliJ IDEA:
 ## Demo
 
 ### Screenshots
-[Login via Postman](path/to/login-screenshot.png) \
-[Get All Categories](path/to/categories-screenshot.png) \
-[Product Search with Filters](path/to/product-search-screenshot.png) \
-[Shopping Cart Response](path/to/shopping-cart-screenshot.png) \
-[Checkout Order](path/to/checkout-screenshot.png)
+[All Products](https://github.com/Sanku-1/Capstone-3-RecordShop/blob/master/src/main/resources/allproducts.png) \
+[Category Search](https://github.com/Sanku-1/Capstone-3-RecordShop/blob/master/src/main/resources/category%20search.png) \
+[Login](https://github.com/Sanku-1/Capstone-3-RecordShop/blob/master/src/main/resources/recordshoplogin.png) \
+[Cleared Shopping Cart](https://github.com/Sanku-1/Capstone-3-RecordShop/blob/master/src/main/resources/emptycart.png)
 
 ## Interesting Code
 
@@ -133,7 +132,8 @@ Potential future enhancements or functionalities:
 - LTCA Java Development Workbooks
 - Insomnia for API Testing
 - [Spring Security Guide](https://www.baeldung.com/spring-security-method-security)
-- [Spring Security Guide](https://docs.oracle.com/javase/8/docs/api/java/sql/Date.html)
+- [SQL Date Methods](https://docs.oracle.com/javase/8/docs/api/java/sql/Date.html)
+- [HTTP Status Codes](https://http.cat/)
 
 
 ## Team Members
