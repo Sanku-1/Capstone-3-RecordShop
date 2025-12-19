@@ -17,6 +17,7 @@ import java.security.Principal;
 // convert this class to a REST controller
 @RestController
 @RequestMapping("/cart")
+@CrossOrigin
 // only logged in users should have access to these actions
 @PreAuthorize("hasRole('ROLE_USER')")
 public class ShoppingCartController
@@ -58,6 +59,7 @@ public class ShoppingCartController
     // add a POST method to add a product to the cart - the url should be
     // https://localhost:8080/cart/products/15 (15 is the productId to be added
     @PostMapping("/products/{productId}")
+    @ResponseStatus(HttpStatus.CREATED)
     public ShoppingCart addToCart(@PathVariable int productId, Principal principal) {
         try
         {
@@ -101,7 +103,7 @@ public class ShoppingCartController
 
     // add a DELETE method to clear all products from the current users cart
     // https://localhost:8080/cart
-    @DeleteMapping("")
+    @DeleteMapping
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void clearCart(Principal principal)
     {
