@@ -12,6 +12,7 @@ import org.yearup.data.mysql.MySqlCategoryDao;
 import org.yearup.models.Category;
 import org.yearup.models.Product;
 
+import javax.annotation.security.RolesAllowed;
 import java.util.List;
 
 // add the annotations to make this a REST controller
@@ -83,9 +84,13 @@ public class CategoriesController {
 
 
     // add annotation to call this method for a DELETE action - the url path must include the categoryId
+    @DeleteMapping("/{id}")
     // add annotation to ensure that only an ADMIN can call this function
+    @Secured("ROLE_ADMIN")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteCategory(@PathVariable int id)
     {
         // delete the category by id
+        categoryDao.delete(id);
     }
 }
