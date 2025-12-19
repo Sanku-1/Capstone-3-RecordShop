@@ -124,7 +124,6 @@ Potential future enhancements or functionalities:
 - **Wishlist Feature:** Allow users to save products for future purchase
 - **Product Reviews:** Enable customers to rate and review products
 - **Advanced Search:** Implement search with autocomplete suggestions
-- **Product Images:** Add support for uploading and displaying product images
 - **Discount Codes:** Implement promotional codes and discount functionality
 
 ## Resources
@@ -139,8 +138,9 @@ Potential future enhancements or functionalities:
 ## Team Members
 
 -  **Raymond Maroun** - Provided starter code and framework for project
--  **Stephen Anku** - Implemented all phases including CategoriesController, bug fixes, shopping cart, user profile, and checkout functionality.
+-  **Stephen Anku** - Implemented all remaining functionality in project, most notable creating the checkout process.
 
 ## Thanks
 
 - Thank you to **Raymond Maroun** for continuous support and guidance throughout my Java learning journey.
+- Appreciation given to Roger Su for support with this project.
